@@ -1,4 +1,4 @@
-.fondo{
+.fondo {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -6,55 +6,80 @@
     margin: 20px;
 }
 
-.formContainer{
+.formContainer {
     background-color: #FFC26F;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     overflow: hidden;
     width: 600px;
     max-width: 100%;
+    /* height: 540px; */
 }
 
-.header{
+.header {
     /* border-bottom: 1px solid #F9E0BB; */
     background-color: #884A39;
     padding: 10px 30px;
 }
 
-.header h1{
+.header h1 {
     margin: 0;
     color: #FFC26F;
 }
 
-.form{
+.form {
     padding: 20px 40px;
 }
 
-.control{
+.control {
+    padding-top: 20px;
     margin-bottom: 10px;
     padding-bottom: 10px;
     position: relative;
 }
 
-.control label{
+.control label {
     display: inline-block;
     margin-bottom: 5px;
 }
 
-.control input{
+.control input {
     border-radius: 4px;
     display: block;
     padding: 10px;
     width: 100%;
 }
 
-/*  */
+.countryName button{
+    width: 18px;
+    height: 18px;
+    background-color: #884A39;
+    color: #FFC26F;
+    border: none;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 15px;
+    padding: 1px;
 
-.countryName span{
-    font-size: 12px;
 }
 
-.form button{
+.countryName {
+    font-size: 20px;
+    /* background-color: white; */
+    align-self: center;
+    padding: 5px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.btnX{
+    width: 10px;
+    height: 10px;
+    padding: 0;
+    cursor: pointer;
+}
+
+.control button {
     background-color: #884A39;
     border: 2px solid #884A39;
     border-radius: 4px;
@@ -67,7 +92,7 @@
     transition: background-color 0.4s ease;
 }
 
-.form button:hover{
+.form button:hover {
     background-color: #C38154;
 }
 
@@ -79,4 +104,12 @@
 .spans {
     color: red;
     font-size: 12px;
+}
+
+.created {
+    color: green;
+}
+
+.listCountries{
+    display: flex;
 }

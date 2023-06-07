@@ -1,5 +1,7 @@
 .fondo {
-    background-color: #C38154;
+    /* background-color: #C38154; */
+    background-image: url("Texturelabs_Sky_166XL.jpg");
+    background-size: cover;
     display: flex;
     margin: 0;
     padding: 0;

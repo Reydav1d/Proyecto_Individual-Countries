@@ -11,17 +11,20 @@ export default function About() {
             <div className={styles.aboutContainer}>
                 <img src={developer} alt='Developer' />
                 <div className={styles.text}>
-                    <h1>Proyecto Individual (PI) Henry Countries</h1>
-                    <h2>Este es un proyecto individual para el bootcamp <a href='https://www.soyhenry.com'>Soy Henry</a></h2>
+                    <h1>Individual Project (PI) Henry Countries</h1>
+                    <h2>This is an individual project for the <a href='https://www.soyhenry.com'>Soy Henry bootcamp.</a></h2>
                     <p>
-                        Fue realizado con el Stack PERN (Postgres, Express, React, Node).
+                        Welcome to my individual project, Henry Countries!
+                        This exciting project is part of my experience in the Soy Henry bootcamp.
+                        As part of the program, I had the opportunity to apply my skills and knowledge
+                        in application development using the PERN stack (Postgres, Express, React, Node).
                         <br />
-                        Para poner en práctica lo aprendido durante el bootcamp.
-                        <br />
-                        Espero que sea de tu agrado.
+                        I hope you enjoy browsing Henry Countries as much as I enjoyed creating it. 
+                        If you have any questions, comments, or simply wish to get in touch, feel free to do so. 
+                        I am available through the following communication channels:
                     </p>
                     <div className={styles.contact}>
-                        <h3>Puedes contactarme por aquí:</h3>
+                        <h3>Contact:</h3>
                         <a href='https://www.linkedin.com/in/reydavid1/'>
                             <img src={linkdin} alt='linkdin-logo' />
                         </a>

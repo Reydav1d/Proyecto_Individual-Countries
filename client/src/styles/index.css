@@ -3,7 +3,9 @@ body {
   font-family: 'Raleway', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #C38154;
+  /* background-color: #C38154; */
+  background-image: url(Texturelabs_Paper_121XL.jpg);
+  background-size: cover;
 }
 
 code {

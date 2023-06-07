@@ -38,4 +38,5 @@
     background-color: #FFC26F;
     transition: background-color 0.4s ease;
     cursor: pointer;
+    text-align: center;
 }

@@ -2,14 +2,7 @@ import styles from "./styles/cards.module.css";
 import earth from "./styles/earth.gif";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import {
-    continentFilter,
-    activityFilter,
-    orderByName,
-    orderByPopulation,
-    getCountryByName,
-} from '../../redux/actions/actions';
-
+import { continentFilter, activityFilter, orderByName, orderByPopulation, getCountryByName, } from '../../redux/actions/actions';
 import Card from "../card/card";
 import SearchBar from '../searchBar/searchBar';
 import Paginate from '../pagination/pagination'
@@ -35,10 +28,8 @@ const Cards = () => {
     }, [filterCountries]);
 
     const dispatch = useDispatch();
-
     const filterByContinent = (e) => {
         dispatch(continentFilter(e.target.value));
-
         if (e.target.value === "All") {
             setCountries([...countries]);
         } else {
@@ -78,7 +69,6 @@ const Cards = () => {
         dispatch(getCountryByName(name));
         setCountries([...filterCountries]);
     };
-
     return (
         <>
             <div>
@@ -150,5 +140,4 @@ const Cards = () => {
         </>
     );
 };
-
 export default Cards;

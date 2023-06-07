@@ -21,6 +21,15 @@
     height: 380px;
 }
 
+.text {
+    height: 400px;
+    width: 650px;
+    background-color: rgba(222, 184, 135, .5);
+    text-align: justify;
+    padding: 15px;
+    border-radius: 20px;
+}
+
 .text h1{
     text-align: center;
 }

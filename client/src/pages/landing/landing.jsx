@@ -11,7 +11,7 @@ const Landing = () => {
             </div>
 
             <div className={styles.plane}>
-                <h3 className={styles.title}>¡Toma un ticket y viaja!</h3>
+                <h3 className={styles.title}>Take a ticket and travel!</h3>
                 <NavLink to="/home">
                     <img src={ticket} alt='plane' />
                 </NavLink>

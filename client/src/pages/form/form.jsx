@@ -181,7 +181,7 @@ const Form = () => {
                             <span className={styles.spans}>{errors.season}</span>
                         </div>
 
-                        <div className={styles.control}>
+                        <div>
                             <div className={styles.listCountries}>
                                 <label>Country</label>
                                 <select className={styles.selects} onChange={selectCountry}>
@@ -199,9 +199,9 @@ const Form = () => {
 
                             <div className={styles.countryName}>
                                 {form.countries.map((c, i) => (
-                                    <div key={i}>
-                                        <button onClick={() => handleDelete(c)} type="button">
-                                            x
+                                    <div className={styles.countrySet} key={i}>
+                                        <button className={styles.btnX} onClick={() => handleDelete(c)} type="button">
+                                            <ion-icon name="trash-outline"></ion-icon>
                                         </button>
                                         <span>{c}</span>
                                     </div>
@@ -211,17 +211,10 @@ const Form = () => {
 
                         <div className={styles.control}>
                             <div className={styles.controlBtns}>
-                                <button
-                                    className={styles.createButton}
-                                    disabled={!formComplete}
-                                    type="submit">
-                                    Create
-                                </button>
-                                <button onClick={clearForm} className={styles.clearButton}>
-                                    Clear
-                                </button>
+                                <button disabled={!formComplete} type="submit">Create</button>
+                                <button onClick={clearForm} className={styles.clearButton}>Clear</button>
                             </div>
-                            <span>{created}</span>
+                            <span className={styles.created}>{created}</span>
                         </div>
                     </div>
                 </form>

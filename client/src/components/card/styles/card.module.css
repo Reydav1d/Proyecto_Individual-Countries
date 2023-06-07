@@ -1,4 +1,4 @@
-.cardContain{
+.cardContain {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -9,18 +9,20 @@
     margin-top: 10px;
 }
 
-.card{
+.card {
     display: flex;
     flex-direction: column;
-    border-radius: 4px;
+    border-radius: 10px;
     align-items: center;
     margin: 5px;
     padding: 0 0 10px 0;
     width: 220px;
-    box-shadow: 0px 3px 10px 1px rgba(0, 0, 0, .1);
+    box-shadow: 0px 3px 10px 4px rgba(0, 0, 0, .1);
+    /* border-color: #a3a3a3; */
+    background-color: rgba(136, 74, 57, 0.3);
 }
 
-.cardImg{
+.cardImg {
     position: relative;
     width: 100%;
     display: block;
@@ -31,22 +33,22 @@
     overflow: hidden;
 }
 
-.cardImg :hover{
+.cardImg :hover {
     cursor: pointer;
 }
 
-.cardImg :hover :after{
+.cardImg :hover :after {
     bottom: 0;
     color: rgba(255, 255, 255, 1);
     transition: all 0.15s;
 }
 
-.cardImg:hover .imgOverlay{
+.cardImg:hover .imgOverlay {
     background-color: rgba(35, 155, 55, .33);
     transition: all 0.15s;
 }
 
-.cardImg::after{
+.cardImg::after {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -61,7 +63,7 @@
     transition: all 0.15s;
 }
 
-.cardImg .imgOverlay{
+.cardImg .imgOverlay {
     display: block;
     position: absolute;
     width: 100%;
@@ -86,8 +88,9 @@
     margin: 0;
 }
 
-.navLink{
+.navLink {
     text-decoration: none;
     color: #FFC26F;
     text-align: center;
+    text-shadow: 2px 4px 10px black;
 }
