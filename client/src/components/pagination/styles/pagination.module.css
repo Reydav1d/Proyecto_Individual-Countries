@@ -1,0 +1,59 @@
+.pagesContain{
+    display: flex;
+    width: 100%;
+    margin-top: 0px;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0 0 5px ;
+    height: 80px;
+}
+
+.pagesContain p{
+    width: 15px;
+    height: 20px;
+    background-color: #FFC26F;
+    text-align: center;
+    border-radius: 4px;
+    padding: 5px;
+    color: #884A39;
+}
+
+.pagesContain h3{
+    width: 20px;
+    height: 25px;
+    background-color: #884A39;
+    text-align: center;
+    border-radius: 4px;
+    padding: 5px;
+    color: #FFC26F;
+}
+
+.pagesContain button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    background-color: #FFC26F;
+    color: #884A39;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-size: 25px;
+    transition: background-color 0.4s ease;
+    border: none;
+}
+
+.pagesContain button:hover {
+    background-color: #C38154;
+}
+
+.prev {
+    display: flex;
+    align-items: center;
+}
+
+.next {
+    display: flex;
+    align-items: center;
+}

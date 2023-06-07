@@ -1,0 +1,36 @@
+.fondoAbout{
+    height: 90%;
+    display: flex;
+    /* flex-direction: column; */
+    /* width: 99%; */
+}
+
+.aboutContainer{
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 530px;
+    justify-content: space-evenly;
+    align-items: center;
+    /* background-color: bisque; */
+}
+
+.aboutContainer img{
+    width: 370px;
+    height: 380px;
+}
+
+.text h1{
+    text-align: center;
+}
+
+.text a {
+    color: black;
+}
+
+.contact img {
+    padding: 5px;
+    width: 40px;
+    height: 40px;
+}

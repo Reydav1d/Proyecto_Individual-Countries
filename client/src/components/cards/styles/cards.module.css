@@ -1,0 +1,41 @@
+.cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    /* padding: 20px; */
+    margin-top: 0px;
+    height: 470px;
+}
+
+.btnContainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    overflow: hidden;
+    justify-content: center;
+}
+
+.loading {
+    width: 100px;
+}
+
+.filtersContainer{
+    display: flex;
+    justify-content: space-evenly;
+    height: 30px;
+    padding: 10px 0 0 0;
+}
+
+.filters select{
+    width: 100%;
+    border: 2px solid #884A39;
+    /* border-right: none; */
+    padding: 5px;
+    border-radius: 8px;
+    outline: none;
+    color: #884A39;
+    background-color: #FFC26F;
+    transition: background-color 0.4s ease;
+    cursor: pointer;
+}

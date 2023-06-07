@@ -1,0 +1,39 @@
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 0 30px;
+    white-space: nowrap;
+    background-color: #884A39;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    box-shadow: 0px 0px 8px 4px rgb(0 0 0 / 50%);
+}
+
+.btnsHA{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.btnsHA button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    background-color: #FFC26F;
+    color: #884A39;
+    cursor: pointer;
+    width: 60px;
+    height: 40px;
+    border-radius: 15px;
+    font-size: 25px;
+    transition: background-color 0.4s ease;
+    border: none;
+}
+
+.btnsHA button:hover {
+    background-color: #C38154;
+}

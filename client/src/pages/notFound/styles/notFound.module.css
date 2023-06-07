@@ -1,0 +1,24 @@
+.notFound {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    padding: 10px;
+}
+
+.notFound img {
+    margin-right: 10px;
+    border-radius: 20px;
+    height: 500px;
+    width: 500px;
+}
+
+.notFound button{
+    border: none;
+    font-size: 20px;
+    background-color: #FFC26F;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+}

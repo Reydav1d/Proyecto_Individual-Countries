@@ -1,0 +1,6 @@
+.cardsContainer{
+    height: 90%;
+    display: flex;
+    /* flex-direction: column; */
+    width: 99%;
+}

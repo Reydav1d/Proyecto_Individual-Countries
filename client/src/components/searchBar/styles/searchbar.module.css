@@ -1,0 +1,28 @@
+.bar {
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+
+.search {
+    width: 100%;
+    border: 3px solid #884A39;
+    border-right: none;
+    padding: 5px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #884A39;
+    transition: background-color 0.4s ease;
+    background-color: #FFC26F;
+}
+
+.add {
+    width: 40px;
+    height: 36px;
+    border: 1px solid #884A39;
+    background: #884A39;
+    text-align: center;
+    color: #FFC26F;
+    border-radius: 0 5px 5px 0;
+    font-size: 20px;
+}
