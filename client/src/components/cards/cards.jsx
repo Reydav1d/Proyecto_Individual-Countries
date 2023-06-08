@@ -2,22 +2,22 @@ import styles from "./styles/cards.module.css";
 import earth from "./styles/earth.gif";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { continentFilter, activityFilter, orderByName, orderByPopulation, getCountryByName, } from '../../redux/actions/actions';
+import { continentFilter, activityFilter, orderByName, orderByPopulation, getCountryByName, } from "../../redux/actions/actions";
 import Card from "../card/card";
-import SearchBar from '../searchBar/searchBar';
-import Paginate from '../pagination/pagination'
+import SearchBar from "../searchBar/searchBar";
+import Paginate from "../pagination/pagination";
 
 const Cards = () => {
     const countriesGlobal = useSelector((state) => state.countries);
     const activities = useSelector((state) => state.activities);
     const filterCountries = useSelector((state) => state.filteredCountries);
     const [countries, setCountries] = useState([]);
-    const { numPage } = useSelector((state) => state)
+    const { numPage } = useSelector((state) => state);
 
     let init = (numPage - 1) * 10;
     let till = numPage * 10;
     let totalPages = Math.floor(countries.length / 10);
-    let pageCountries = countries.slice(init, till)
+    let pageCountries = countries.slice(init, till);
 
     useEffect(() => {
         setCountries(countriesGlobal);
@@ -28,47 +28,53 @@ const Cards = () => {
     }, [filterCountries]);
 
     const dispatch = useDispatch();
+
+    const applyFilters = () => {
+        let filteredCountries = [...countriesGlobal];
+
+        if (filterCountries.length > 0) {
+            filteredCountries = [...filterCountries];
+        }
+
+        setCountries(filteredCountries);
+    };
+
     const filterByContinent = (e) => {
         dispatch(continentFilter(e.target.value));
-        if (e.target.value === "All") {
-            setCountries([...countries]);
-        } else {
-            setCountries([...filterCountries]);
-        }
+        applyFilters();
         e.target.value = "";
     };
 
     const orderName = (e) => {
         dispatch(orderByName(e.target.value));
+        applyFilters();
         e.target.value = "";
     };
 
     const orderPopulation = (e) => {
         dispatch(orderByPopulation(e.target.value));
+        applyFilters();
         e.target.value = "";
     };
 
     const filterByActivity = (e) => {
         dispatch(activityFilter(e.target.value));
-        if (e.target.value === "All") {
-            setCountries([...countries]);
-        } else {
-            setCountries([...filterCountries]);
-        }
+        applyFilters();
         e.target.value = "";
     };
 
-    let newAcitivities;
+    let newActivities;
     if (Array.isArray(activities)) {
-        newAcitivities = activities.filter(
+        newActivities = activities.filter(
             (obj, index, arr) => index === arr.findIndex((t) => t.name === obj.name)
         );
     }
 
     const searchCountry = (name) => {
         dispatch(getCountryByName(name));
-        setCountries([...filterCountries]);
+        applyFilters();
     };
+
     return (
         <>
             <div>
@@ -102,27 +108,26 @@ const Cards = () => {
                         </select>
                     </div>
                     <div className={styles.filters}>
-                        <select className={styles.selects} name="activity" onChange={filterByActivity}>
+                        <select className={styles.selects}name="activity"onChange={filterByActivity}>
                             <option value="" hidden>Activity</option>
                             <option value="All">All</option>
-                            {Array.isArray(newAcitivities) ? (
-                                newAcitivities.map((activity) => {
+                            {Array.isArray(newActivities) ? (
+                                newActivities.map((activity) => {
                                     return (
-                                        <option key={activity.id} value={activity.name}>
-                                            {activity.name}
-                                        </option>
+                                        <option key={activity.id} value={activity.name}>{activity.name}</option>
                                     );
                                 })
                             ) : (
-                                <option value="" disabled>Create a new activity</option>
+                                <option value="" disabled>Not activites</option>
                             )}
                         </select>
                     </div>
                 </div>
                 <div className={styles.cardContainer}>
-                    {!pageCountries.length ? <img className={styles.loading} src={earth} alt="loading-img" />
-                        :
-                        (pageCountries.map((country) => {
+                    {!pageCountries.length ? (
+                        <img className={styles.loading} src={earth} alt="loading-img" />
+                    ) : (
+                        pageCountries.map((country) => {
                             return (
                                 <Card
                                     key={country.id}
@@ -132,8 +137,8 @@ const Cards = () => {
                                     continents={country.continents}
                                 />
                             );
-                        }))
-                    }
+                        })
+                    )}
                 </div>
                 <Paginate totalPages={totalPages} />
             </div>
