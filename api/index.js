@@ -23,7 +23,7 @@ const getApi = require('./src/controllers/getData.controller.js');
 
 
 // Syncing all the models at once.
-conn.sync({ force: true }).then(() => {
+conn.sync({ force: false }).then(() => {
   server.listen(3001, async () => {
     await getApi();
     console.log("Succesfully")

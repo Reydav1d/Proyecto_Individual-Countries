@@ -13,6 +13,19 @@ const getActivities = async (req, res) => {
 const postActivities = async (req, res) => {
     const { id, name, difficulty, duration, season, countries } = req.body;
 
+    if (!difficulty)
+    res.status(400).send("Debes agregar una dificultad")
+
+    if (!duration)
+    res.status(400).send("Debes agregar una duracion")
+
+    if (!season)
+    res.status(400).send("Debes agregar una temporada")
+
+    if (!countries)
+    res.status(400).send("Debes agregar un pais")
+
+
     try {
         const activity = await Activity.create({
             id,
